@@ -1,0 +1,13 @@
+
+
+
+principal = int(input('Principal: '))
+interest_float = float(input('Interest (decimal): '))
+num_years = int(input('Number of years: '))
+compound_per_year  = int(input('Compound interest per year: '))
+
+exponent = compound_per_year * num_years 
+amount = principal * ( 1 + interest_float / compound_per_year) ** exponent
+
+print()
+print('Balance: $ {:.2f}'.format(amount))
