@@ -1,7 +1,7 @@
 def print_odds(start, final, order):
     """
     -------------------------------------------------------
-    The function prints all odd numbers inclusive both ends
+    Prints all odd numbers inclusive both ends
     in the range [start,final] and the order parameter 
     controls the order of printing, such that ‘D’ means 
     descending order and ‘A’ means ascending order. 
