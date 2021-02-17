@@ -1,0 +1,38 @@
+def perfect_square(num):
+    """
+    -------------------------------------------------------
+    Takes an integer called num as parameter and prints all 
+    the perfect square numbers between 1 and num (exclusive). 
+    If num is not a positive integer, your function should 
+    display an error message. 
+    
+    Use: perfect_square(num)
+    -------------------------------------------------------
+    Parameters:
+    num - Integer to guess (int > 0)
+
+    Returns:
+    none 
+    
+    -------------------------------------------------------
+    """
+    if num < 0:
+        print()
+        print('You did not enter a positive integer')
+    else:
+        i = 1
+        
+        square = i * i 
+    
+        print()
+        
+        print('Perfect Squares below {} are: '.format(num), end = '')
+        
+        while square < num:
+            print(square, end = ', ')
+            i = i + 1
+            square = i * i
+            
+pos_int = int(input('Enter a positive integer: '))
+
+perfect_square(pos_int)
