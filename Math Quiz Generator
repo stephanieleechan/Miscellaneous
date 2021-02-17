@@ -1,4 +1,19 @@
 def math_quiz():
+    """
+    -------------------------------------------------------
+    Gives simple math quizzes. The function takes no parameters 
+    and returns no values. The function should display the two 
+    random integers (0-999) that are to be added.
+    
+    Use: math_quiz()
+    -------------------------------------------------------
+    Parameters:
+    none
+
+    Returns:
+    none
+    -------------------------------------------------------
+    """
 
     from random import randint 
     
