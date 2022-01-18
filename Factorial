@@ -1,21 +1,4 @@
-def factorial(num):
-    """
-    -------------------------------------------------------
-    Takes a non-negative integer num as a parameter and then 
-    uses a while loop to calculate and return the factorial 
-    of that number. If the user enters a negative number, 
-    the function returns the integer -1
-    Use: fact = factorial(num)
-    -------------------------------------------------------
-    Parameters:
-    num - Positive integer used to calculate (int > 0)
-
-    Returns:
-    fact - Factorial of the number
-    
-    -------------------------------------------------------
-    """
-    
+def factorial(num): 
     if num < 0:
         fact = -1
     else: 
