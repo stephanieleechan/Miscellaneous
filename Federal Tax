@@ -1,16 +1,4 @@
 def calc_federal_tax(income): 
-    """
-    ------------------------------------------------------- 
-    Calculates a number that represents the calculated federal tax
-    Use: total_fed_tax = calc_federal_tax(income)
-    -------------------------------------------------------
-    Parameters:
-        income = income inputted by user
-    -------------------------------------------------------
-    Returns:
-        total_fed_tax - total calculated federal tax
-    -------------------------------------------------------
-    """
     TAX_RATE1 = 0.15
     TAX_RATE2 = 0.25
     TAX_RATE3 = 0.35
