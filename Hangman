@@ -1,0 +1,246 @@
+#Hangman
+#A virtual birthday/fun party game to play with friends, user guesses words as part of the hangman game
+
+ 
+
+def get_word():
+
+ 
+
+    word = random.choice(WORD_LIST)
+
+ 
+
+    return word.upper()
+
+ 
+
+#List to show how the hangman would look in different stages
+
+ 
+
+def show_hangman(user_tries):
+
+ stages = [ """
+
+                                ----------
+
+                                |        |
+
+                                |        O
+
+                                |       \ /
+
+                                |        |
+
+                                |       / \
+
+                               
+
+                    """
+
+                    ,
+
+                   
+
+                    """
+
+                                ----------
+
+                                |        |
+
+                                |        O
+
+                                |       \ /
+
+                                |        |
+
+                                |       /
+
+                    """
+
+                    ,
+
+                   
+
+                    """
+
+                                ----------
+
+                                |        |
+
+                                |        O
+
+                                |       \ /
+
+                                |        |
+
+                                |      
+
+    
+
+                    
+
+                    """
+
+                    ,
+
+                   
+
+                    """
+
+                                ----------
+
+                                |        |
+
+                                |        O
+
+                                |       \
+
+                                |        |
+
+                                |      
+
+                    """
+
+                    ,
+
+                    """
+
+                                ----------
+
+                                |        |
+
+                                |        O
+
+                                |        |
+
+                                |       
+
+                                |      
+
+                                
+
+                    """
+
+                    ,
+
+              
+
+                    """
+
+                                ----------
+
+                                |        |
+
+                                |        O
+
+                                |      
+
+                                |       
+
+                                |      
+
+                                
+
+                    """
+
+                    ,
+
+                   
+
+                    """
+
+                       
+
+                                ----------
+
+                                |        |
+
+                                |       
+
+                                |
+
+                                |
+
+                                |
+
+                   
+
+                    """
+
+    ]
+
+   
+
+    return stages[user_tries]
+
+ 
+
+#main
+
+ 
+
+import random
+
+ 
+
+WORD_LIST = ['Banana', 'Carrot', 'Apple', 'Tomato', 'Peach', 'Watermelon']
+
+ 
+
+word = get_word()
+
+blank = '-'* len(word)
+
+ 
+
+done = False
+
+guess = blank
+
+miss = 6
+
+ 
+
+while not done and miss >= 0:
+
+    letter = input('Enter letter: ').upper()
+
+    if letter in word:
+
+        for i in range(0, len(word)):
+
+            if letter == word[i]:
+
+                guess = guess[:i] + letter + guess[i+1:]
+
+        print (guess)
+
+        if guess == word:
+
+            done = True
+
+    else:
+
+        print (guess)
+
+        print (show_hangman(miss))
+
+        miss = miss - 1
+
+ 
+
+    if miss < 0:
+
+        done = True
+
+   
+
+if done and miss > 0:
+
+    print ('Success')
+
+else:
+
+    print ('Failure')
