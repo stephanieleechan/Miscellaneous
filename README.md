@@ -1,4 +1,4 @@
-# Calculators-Python
-Python | 
-Compound interest, provincial tax, federal tax, math quiz generator, perfect squares, factorials 
+# Python-and-Java
+Python, Java | 
+Compound interest, provincial tax, federal tax, math quiz generator, perfect squares, factorials, game, files, exercises
 
